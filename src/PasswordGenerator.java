@@ -15,8 +15,7 @@ import java.util.Scanner;
 
 public class PasswordGenerator {
     public static void main(String[] args) throws Exception {
-		try {
-			Scanner scan = new Scanner(System.in);
+		try(Scanner scan = new Scanner(System.in)){
 			System.out.println("Inserisci il tuo nome");
 			String nome = scan.next();
 			System.out.println("Inserisci il tuo cognome");
