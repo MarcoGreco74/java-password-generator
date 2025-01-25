@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class PasswordGenerator {
     public static void main(String[] args) throws Exception {
-		try(Scanner scan = new Scanner(System.in)){
+			Scanner scan = new Scanner(System.in);
 			System.out.println("Inserisci il tuo nome");
 			String nome = scan.next();
 			System.out.println("Inserisci il tuo cognome");
@@ -32,9 +32,6 @@ public class PasswordGenerator {
 			int birthDate = giorno+mese+anno;
 			String password = nome+dash+cognome+dash+colore+dash+birthDate;
 			System.out.println("La tua password è: "+password);
-      		scan.close();
-    		}catch (ExceptionInInitializerError e) {
-      			System.out.println("An error occurred.");  
-    		} 
+      		scan.close();  		
   		}
 	}
